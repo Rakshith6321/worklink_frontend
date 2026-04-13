@@ -4,7 +4,8 @@ function ProtectedRoute({ children }) {
   const storedUser =
     localStorage.getItem("worklinkUser") || localStorage.getItem("user");
 
-  if (!storedUser) {
+  // Handle invalid values
+  if (!storedUser || storedUser === "undefined" || storedUser === "null") {
     return <Navigate to="/login" replace />;
   }
 

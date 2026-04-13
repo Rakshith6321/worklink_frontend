@@ -157,6 +157,24 @@ function Login() {
         {loading ? "Logging in..." : "Login"}
       </button>
 
+      {/* ✅ ADDED REGISTER BUTTON (no UI disturbance) */}
+      <button
+        onClick={() => navigate("/register")}
+        style={{
+          width: "100%",
+          padding: "12px",
+          background: "#198754",
+          color: "white",
+          border: "none",
+          borderRadius: "8px",
+          cursor: "pointer",
+          marginTop: "10px",
+          transition: "0.3s ease",
+        }}
+      >
+        Register
+      </button>
+
       <style>
         {`
           @keyframes spin {
